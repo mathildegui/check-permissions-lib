@@ -50,3 +50,24 @@ artifacts {
     archives javadocsJar
     archives sourcesJar
 }
+
+bintray {
+    user = 'mathildegui'
+    key = '9ecdc210d3d2843ed2281547aefd53af9d12d8bf'
+    pkg {
+        repo = 'maven'
+        name = 'com.github.hathibelagal.mylittlelibrary'
+
+        version {
+            name = '1.0.1-tuts'
+            desc = 'My test upload'
+            released  = new Date()
+            vcsTag = '1.0.1'
+        }
+
+        licenses = ['Apache-2.0']
+        vcsUrl = 'https://github.com/mathildegui/check-permissions-lib.git'
+        websiteUrl = 'https://github.com/mathildegui/check-permissions-lib'
+    }
+    configurations = ['archives']
+}
